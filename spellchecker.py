@@ -36,7 +36,7 @@ class SpellChecker:
 
     def _one_edit_away(self, word):
         letters = 'abcdefghijklmnopqrstuvwxyz'
-        splits = [(word[:i], word[i:]) for i in xrange(len(word) + 1)]
+        splits = [(word[:i], word[i:]) for i in range(len(word) + 1)]
         deletes = [left + right[1:] for left, right in splits if right]
         transposes = [left + right[1] + right[0] + right[2:] for left, right in splits if len(right) > 1]
         replaces = [left + char + right[1:] for left, right in splits if right for char in letters]
@@ -67,7 +67,7 @@ if args.input_file and args.output_file:
 
         # Preserve capitalization if possible
         if len(corrected_word) == len(word):
-            for i in xrange(0, len(word)):
+            for i in range(0, len(word)):
                 properly_capizalized_char = corrected_word[i].upper() if word[i].isupper() else corrected_word[i]
                 corrected_word = corrected_word[0:i] + properly_capizalized_char + corrected_word[i+1:]
 
