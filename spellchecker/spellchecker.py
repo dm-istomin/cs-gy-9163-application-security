@@ -25,7 +25,7 @@ class SpellChecker:
 
     def _candidate_spellings(self, word):
         return (
-            self._known([word]) or 
+            self._known([word]) or
             self._known(self._one_edit_away(word)) or
             self._known(self._two_edits_away(word)) or
             [word]
