@@ -31,5 +31,5 @@ credentials without you performing an action.
 ### SQL Injection
 
 This app does SQL interpolation in the wrong way, which makes it very easy to do SQL injection.
-To try it out, simply enter any username and enter this string for the password: `' or ''='`.
+To try it out, go to the homepage login form and enter any username with this password: `' or ''='`.
 It will allow you to get a session no matter what the user password is.
