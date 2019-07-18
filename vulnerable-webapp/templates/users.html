@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(0, num_users) %}
+        <tr>
+          <td>{{users[i][0]}}</td>
+          <td>{{users[i][1]}}</td>
+          <td>{{users[i][2]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
